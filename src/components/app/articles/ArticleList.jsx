@@ -7,6 +7,7 @@ const ArticleList = ({articles}) => (
         {articles.map(article => (
             <li key={`${article.author}-${article.title}`}>
                 <Article {...article}/>
+                <hr/>
             </li>
         ))}
         

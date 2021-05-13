@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 const Search = ({search, onSearchChange, onSubmit}) => (
     <form onSubmit={onSubmit}>
         <label htmlFor='article-search'>Search for article mentions</label>
-        <input name='article-search' type='text' 
+        <input id='article-search' type='text' 
         value={search} 
         onChange={onSearchChange}/>
-        <button>Submit</button>
+        <button aria-label='search-articles'>Submit</button>
     </form>
 )
 

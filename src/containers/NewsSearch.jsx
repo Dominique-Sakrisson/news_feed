@@ -21,8 +21,7 @@ export default class NewsSearch extends Component {
 
     handleSubmit= async (event) => {
         event.preventDefault();
-        console.log(event)
-        console.log(typeof(this.state.search))
+      
 
         this.setState({loading: true})
         const articles = await getArticles(this.state.search);
