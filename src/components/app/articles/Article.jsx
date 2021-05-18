@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const Article = ({author, title, description}) => (
+const Article = ({author, title, description, url}) => (
     <>
         <h1>{title}</h1>
         <h3>{author}</h3>
         <p>{description}</p>
+        <a href={url}>Read the full article</a>
     </>
 )
 
