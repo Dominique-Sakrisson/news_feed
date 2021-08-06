@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Search = ({search, onSearchChange, onSubmit}) => (
     <form onSubmit={onSubmit}>
-        <label htmlFor='article-search'>Search anything for news articles</label><br/> 
+        <label htmlFor='article-search'>Search a term for related news articles</label><br/> 
         <input id='article-search' type='text' 
         value={search} 
         onChange={onSearchChange}/>

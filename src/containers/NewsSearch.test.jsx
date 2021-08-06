@@ -11,7 +11,12 @@ jest.mock('../services/newsApi.js', () => ({
       author: 'dizzom',
       title: 'hello',
       description: 'what a great',
-      url: 'image url'}]
+      url: 'image url'}],
+  getHeadlines: () => [{
+      author: 'global',
+      title: 'Goodbye',
+      description: 'This is fun',
+      url: 'image url again'}]
 }))
 
 describe('tests the NewsSearch Container', () => {
@@ -20,7 +25,7 @@ describe('tests the NewsSearch Container', () => {
 
     screen.getByText('Loading...');
 
-    const input = await screen.findByLabelText('Search for article mentions');
+    const input = await screen.findByLabelText('Search a term for related news articles');
     userEvent.type(input, 'Ford');
 
     const submitButton = await screen.findByRole('button', {
