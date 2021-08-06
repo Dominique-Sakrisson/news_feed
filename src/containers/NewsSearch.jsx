@@ -14,7 +14,7 @@ export default class NewsSearch extends Component {
     };
 
     async componentDidMount() {
-        const articles = await getArticles('default');
+        const articles = await getHeadlines();
         this.setState({loading: false, articles})
     };
 
@@ -47,7 +47,7 @@ export default class NewsSearch extends Component {
                 onSearchChange={this.handleArticleSearch}
                 onSubmit={this.handleSubmit}
                 />
-                {(getArticles)? <h2>{`Headlines for ${lastSearch}`}</h2>: <h2>Some default articles</h2>}
+                {(getArticles)? <h2>{`Headlines for ${lastSearch}`}</h2>: <h2>Headlines in the US</h2>}
                 <div className={style.articleListDiv}>
                     <ArticleList articles={articles} /> 
                 </div>
